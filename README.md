@@ -3,6 +3,7 @@ thrift demo
 
 ### 安装
 ```bash
+# 此处为mac安装，其余环境略
 brew install thrift
 ```
 
