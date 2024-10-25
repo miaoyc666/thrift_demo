@@ -1,5 +1,5 @@
 // hello.thrift
-namespace go example
+namespace go test.com.hello
 
 service HelloWorld {
     string sayHello(1:string name)

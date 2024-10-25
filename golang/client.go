@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"demo/gen-go/example" // 导入生成的 Thrift 代码
+	"demo/gen-go/test/com/hello"
 	"github.com/apache/thrift/lib/go/thrift"
 	"log"
 	"net"
@@ -34,7 +34,7 @@ func main() {
 	defer useTransport.Close()
 
 	// 创建客户端
-	client := example.NewHelloWorldClientFactory(useTransport, protocolFactory)
+	client := hello.NewHelloWorldClientFactory(useTransport, protocolFactory)
 
 	// 调用服务
 	response, err := client.SayHello(context.Background(), "World")

@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"demo/gen-go/example"
+	"demo/gen-go/test/com/hello"
 	"github.com/apache/thrift/lib/go/thrift"
 	"log"
 	"net"
@@ -30,7 +30,7 @@ func main() {
 
 	// 实例化服务处理器
 	handler := &HelloWorldHandler{}
-	processor := example.NewHelloWorldProcessor(handler)
+	processor := hello.NewHelloWorldProcessor(handler)
 
 	// 创建服务端
 	server := thrift.NewTSimpleServer4(processor, transport, transportFactory, protocolFactory)
